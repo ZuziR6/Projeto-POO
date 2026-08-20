@@ -1,0 +1,26 @@
+// Source code is decompiled from a .class file using FernFlower decompiler (from Intellij IDEA).
+public class Main {
+   public Main() {
+   }
+
+   public static void main(String[] var0) {
+      ContaBancaria var1 = new ContaBancaria("João", (double)500.0F);
+      System.out.println("Titular: " + var1.getTitular());
+      System.out.println("Saldo inicial: R$ " + var1.getSaldo());
+      System.out.println("\n--- DEPÓSITO VÁLIDO ---");
+      var1.depositar((double)200.0F);
+      System.out.println("Saldo atual: R$ " + var1.getSaldo());
+      System.out.println("\n--- DEPÓSITO INVÁLIDO ---");
+      var1.depositar((double)-100.0F);
+      System.out.println("Saldo atual: R$ " + var1.getSaldo());
+      System.out.println("\n--- SAQUE VÁLIDO ---");
+      var1.sacar((double)150.0F);
+      System.out.println("Saldo atual: R$ " + var1.getSaldo());
+      System.out.println("\n--- SAQUE INVÁLIDO ---");
+      var1.sacar((double)1000.0F);
+      System.out.println("Saldo atual: R$ " + var1.getSaldo());
+      System.out.println("\n--- SAQUE COM ZERO ---");
+      var1.sacar((double)0.0F);
+      System.out.println("Saldo atual: R$ " + var1.getSaldo());
+   }
+}
